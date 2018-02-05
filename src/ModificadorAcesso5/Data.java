@@ -1,4 +1,5 @@
 package ModificadorAcesso5;
+
 class Data {
 	int dia;
 	int mes;

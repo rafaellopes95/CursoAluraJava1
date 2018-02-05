@@ -1,19 +1,36 @@
-package ModificadorAcesso5;
+package AtributoEMetodoEstatico7;
 
 class Funcionario {
 	private String nome;
+	private int identificador;
 	private String departamento;
 	private double salario;
 	private String dataEntradaNoBanco;
 	private Data dataEntradaNoBancoData;
 	private String rg;
+	private static int proxFuncId;
 	
+	public Funcionario() {
+		Funcionario.proxFuncId++;
+		this.identificador = Funcionario.proxFuncId;
+	}
+	
+	public Funcionario(String nome) {
+		setNome(nome);
+		Funcionario.proxFuncId++;
+		this.identificador = Funcionario.proxFuncId;
+	}
+
 	public String getNome() {
 		return nome;
 	}
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public int getIdentificador() {
+		return identificador;
 	}
 
 	public String getDepartamento() {
@@ -71,11 +88,12 @@ class Funcionario {
 	*/
 
 	public void exibeInformacoes() {
-		System.out.println("Nome do funcionario: " + this.nome);
-		System.out.println("Departamento onde trabalha: " + this.departamento);
-		System.out.println("Salario: R$" + this.salario);
-		System.out.println("Data de entrada no Banco: " + this.dataEntradaNoBancoData.getFormatada());
-		System.out.println("RG: " + this.rg);
+		System.out.println("Nome do funcionario: " + this.getNome());
+		System.out.println("Id do funcionario: " + this.getIdentificador());
+		System.out.println("Departamento onde trabalha: " + this.getDepartamento());
+		System.out.println("Salario: R$" + this.getSalario());
+		System.out.println("Data de entrada no Banco: " + this.getDataEntradaNoBancoData().getFormatada());
+		System.out.println("RG: " + this.getRg());
 		System.out.println("Ganho anual: " + this.getGanhoAnual());
 	}
 }

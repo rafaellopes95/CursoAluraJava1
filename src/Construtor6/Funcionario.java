@@ -1,4 +1,4 @@
-package ModificadorAcesso5;
+package Construtor6;
 
 class Funcionario {
 	private String nome;
@@ -7,6 +7,14 @@ class Funcionario {
 	private String dataEntradaNoBanco;
 	private Data dataEntradaNoBancoData;
 	private String rg;
+	
+	public Funcionario() {
+
+	}
+	
+	public Funcionario(String nome) {
+		this.setNome(nome);
+	}
 	
 	public String getNome() {
 		return nome;
