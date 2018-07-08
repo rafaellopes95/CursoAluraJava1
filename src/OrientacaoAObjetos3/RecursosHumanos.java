@@ -31,7 +31,6 @@ class RecursosHumanos {
 		} else {
 			System.out.println("diferentes");
 		}
-		
 		if(func1 == func3) {
 			System.out.println("iguais");
 		} else {
